@@ -1,15 +1,34 @@
-#ifndef ntpCalculate_h
-#define ntpCalculate_h
+//LICENSE
+ /*
+	NTPtime.h handles timeSync with NTP server pool. Latest version at https://github.com/technochatter/IoT7egment
+    Copyright (C) 2016  Animesh Chatterjee(technochatter@yahoo.in)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	*/
+
+#ifndef NTPtime_h
+#define NTPtime_h
 #include <WiFiUdp.h>
 
 static char* dayNames[]={"", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 static const uint8_t monthDays[]={31,28,31,30,31,30,31,31,30,31,30,31};
-static char* monthNames[]={"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
+static char* monthNames[]={"","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
 #define LEAP_YEAR(Y) ( ((1970+Y)>0) && !((1970+Y)%4) && ( ((1970+Y)%100) || !((1970+Y)%400) ) )
 
 struct  strDateTime
 {
-  byte hour;//byte==unsigned char
+  byte hour;
   byte minute;
   byte second;
   int year;
@@ -26,9 +45,6 @@ byte packetBuffer[ NTP_PACKET_SIZE]; // Buffer to hold incoming and outgoing UDP
 const unsigned int NTPport = 2390;  // Local port to listen for UDP packets
 unsigned long epoch;
   
-char* ntpServerName = "asia.pool.ntp.org";//NTP server pool
-unsigned long timeZone=55;//+5.5
-
 void ExtractFromUnixTime( unsigned long TimeStamp, struct strDateTime* DateTime)
 {
     uint8_t year;
@@ -128,7 +144,7 @@ boolean receiveNTPpacket()
     }
 }
 
-boolean timeSync(char * ntpServerName, int timezone)
+boolean timeSync(char * ntpServerName, int timeZone)
 {
   udp.begin(NTPport); // Open the UDP port for comms
   IPAddress timeServerIP; // server IP address

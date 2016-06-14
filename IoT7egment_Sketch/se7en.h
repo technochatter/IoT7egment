@@ -19,33 +19,35 @@
 
 /*
  * 74HC595-7_SEGMENT
- *     0 Q0-E
- *     0 Q1-DP
- *     1 Q2-D
- *     1 Q3-C
- *     1 Q4-G
- *     1 Q5-A
- *     0 Q6-F
- *     1 Q7-B
+ *      Q0-E
+ *      Q1-DP
+ *      Q2-D
+ *      Q3-C
+ *      Q4-G
+ *      Q5-A
+ *      Q6-F
+ *      Q7-B
  *      
+*/
+
+/*
+To add new character add the character at the end of 
+segCharacter[] array and the corresponding bit value to the digits[] array
 */
 
 #ifndef se7en_h
 #define se7en_h
 #include <arduino.h>
-/*struct taskDisplay{
-  void (*callbackFunc)(String str);
-  unsigned int exeCycle;
-  unsigned int exeStatus;
-  unsigned statusFlag;//if status flag true then task completed(only for run once task) else check whether running then chek if executed at least once (only for scroll repeat)
-}*/
+
 const int numberOfDigits=6;
 const byte mask=0b10000000;
-typedef enum status {RUNNING, FINISHED} runningStatus;
+const unsigned long scrollDelay=400;
+typedef enum _status {ENGAGED, FREE} displayStatus;
 typedef enum align {LEFT, RIGHT, APPEAR, SCROLL} Alignment;
 typedef enum {HOURS=24, AM_PM=12} timeFormat;
 typedef enum {Hi=1, No=2, Lo=3} Priority;
-typedef enum {I, Q} Execute;
+typedef enum {I, Q} Execute;//to be implemented Immediate or Queue when two subsequent prints are called
+
 //Segments pins assignment in order a,b,c,d,e,f,g,dot
 const uint8_t segpin[] = {5,7,3,2,0,6,4,1};//CONFIGURE ACCORDING TO CIRCUITRY Q-Numbers 5== Q5 of Shift Register
 const char segCharacter[] = {'0','1','2','3','4','5','6','7','8','9','A','a','b','C','c','d','E','e','F','g','H','h','I','i','J','K','L','l','n','o','P','q',' ','r','S','t','U','u','y','z','-','_','!','?','=','\'',',',':'};
@@ -104,18 +106,18 @@ const uint8_t digits[] = {
 };
 
 class se7en {
+  
 public:
+
   se7en(int,int,int);
   void begin();
   void begin(Alignment);
-  void scrollDisplay(String ,unsigned long, boolean, int *);
-  void displayWord(String, unsigned long, boolean);
-  void updateDigit(int, char , boolean );
+  void scrollDisplay(String ,unsigned long);
   void print(String str);
-  //void printTime(timeFormat tf);
-  
+  boolean printlp(String str);//print low priority if disply is engaged then it doesn't print and returns false
+  displayStatus segStatus=FREE;
 private:
-  unsigned long _currentmil,_prevmil;
+
   int _datapin;
   int _clockpin;
   int _latchpin;
