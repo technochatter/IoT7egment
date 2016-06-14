@@ -5,12 +5,16 @@ Seven Segment Visible swapable digit display with esp8266
 
 NTP 12Hr Clock Mode:
 ![NTP_12Hr](https://github.com/technochatter/IoT7egment/blob/master/docs/Face.JPG?raw=true)
+
 Connected to HOTSPOT Prompt:
 ![HOTSPOT_Connected](https://github.com/technochatter/IoT7egment/blob/master/docs/2.JPG?raw=true)
+
 NTP 24Hr Clock Mode:
 ![NTP_24Hr](https://github.com/technochatter/IoT7egment/blob/master/docs/3.JPG?raw=true)
+
 Time Sync Done:
 ![Sync_Prompt](https://github.com/technochatter/IoT7egment/blob/master/docs/4.JPG?raw=true)
+
 _Photos dont justify the looks_:
 ![looks](https://github.com/technochatter/IoT7egment/blob/master/docs/5.JPG?raw=true)
 
