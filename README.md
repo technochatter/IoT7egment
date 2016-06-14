@@ -23,7 +23,7 @@ _Photos dont justify the looks_:
 * Digits expandable to Eight.
 * Easy to use Arduino Coding : Example, Simply the statement:
 
-		`Display.print("String to Display")`
+`Display.print("String to Display")`
 
 	will display the given string in the display. If the string has more characters than the number of Digits then it will Scroll the string from Left to Right.
 
@@ -31,7 +31,7 @@ _Photos dont justify the looks_:
 * The time display is overridden when any other string is printed (i.e. print() function is called with instance of the class) and Time Display resumes when display is free.
     
 # Shortcomings
-** characters: m, w, x and any other undefined symbols will be replaced with _(underscore or dash) **
+**characters: m, w, x and any other undefined symbols will be replaced with _(underscore or dash)**
 	
 # To Do
 * Use PROGMEM to release heap
