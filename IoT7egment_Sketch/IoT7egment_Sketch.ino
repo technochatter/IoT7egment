@@ -224,5 +224,5 @@ void setup()
 
 void loop()
 {
-  
+  //WiFi or web handling code here
 }
