@@ -1,19 +1,24 @@
 # IoT7egment
-Seven Segment Visible swapable digit display with esp8266
+Seven Segment Highly Visible and Stylish Display with Swapable digit to suit your color! Connects to the internet using esp8266.Can be used as a clock by default or displaying Notifications Weather and what not. 
 
 # Snapshots
+
 
 NTP 12Hr Clock Mode:
 ![NTP_12Hr](https://github.com/technochatter/IoT7egment/blob/master/docs/Face.JPG?raw=true)
 
+
 Connected to HOTSPOT Prompt:
 ![HOTSPOT_Connected](https://github.com/technochatter/IoT7egment/blob/master/docs/2.JPG?raw=true)
+
 
 NTP 24Hr Clock Mode:
 ![NTP_24Hr](https://github.com/technochatter/IoT7egment/blob/master/docs/3.JPG?raw=true)
 
+
 Time Sync Done:
 ![Sync_Prompt](https://github.com/technochatter/IoT7egment/blob/master/docs/4.JPG?raw=true)
+
 
 _Photos dont justify the looks_:
 ![looks](https://github.com/technochatter/IoT7egment/blob/master/docs/5.JPG?raw=true)

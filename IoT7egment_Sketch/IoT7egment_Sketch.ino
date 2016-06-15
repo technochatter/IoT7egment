@@ -33,7 +33,7 @@ const int datapin = 14;
 IoT7egment Display(datapin,clockpin,latchpin);
 
 char ssid[] = "SSID";  //  your network SSID (name)
-char pass[] = "12345";       // your network password
+char pass[] = "password";       // your network password
 
 int timeout=5000;
 
@@ -128,8 +128,10 @@ void timeClock()//executes every second
           DateTimeInstance.minute++;
         else{
           DateTimeInstance.minute=0;
-          if(DateTimeInstance.hour<59)
+          if(DateTimeInstance.hour<24)
             DateTimeInstance.hour++;
+            else
+              DateTimeInstance.hour=0;
              }
           }
  }
@@ -224,5 +226,5 @@ void setup()
 
 void loop()
 {
-  //WiFi or web handling code here
+  
 }
