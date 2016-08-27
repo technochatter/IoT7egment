@@ -34,7 +34,7 @@ Custom Pin Config:
 Device Name:	
 ![Menu_3](https://github.com/technochatter/IoT7egment/blob/master/docs/9.png?raw=true)
 
-ThingSpeak:	
+ThingSpeak:		
 ![Menu_4](https://github.com/technochatter/IoT7egment/blob/master/docs/10.png?raw=true)
 
 
