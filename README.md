@@ -25,17 +25,17 @@ _Photos dont justify the looks_:
 
 #CONFIG MENU
 
-Expandable Menu:
-![Accordion list](https://github.com/technochatter/IoT7egment/blob/master/docs/6.png?raw=true)
+Expandable Menu:	
+![Accordion_list](https://github.com/technochatter/IoT7egment/blob/master/docs/6.png?raw=true)
 
-Custom Pin Config:
-![Menu 1](https://github.com/technochatter/IoT7egment/blob/master/docs/7.png?raw=true)
+Custom Pin Config:	
+![Menu_1](https://github.com/technochatter/IoT7egment/blob/master/docs/7.png?raw=true)
 
-Device Name:
-![Menu 3](https://github.com/technochatter/IoT7egment/blob/master/docs/9.png?raw=true)
+Device Name:	
+![Menu_3](https://github.com/technochatter/IoT7egment/blob/master/docs/9.png?raw=true)
 
-ThingSpeak:
-![Menu 4](https://github.com/technochatter/IoT7egment/blob/master/docs/10.png?raw=true)
+ThingSpeak:	
+![Menu_4](https://github.com/technochatter/IoT7egment/blob/master/docs/10.png?raw=true)
 
 
 
