@@ -23,6 +23,22 @@ Time Sync Done:
 _Photos dont justify the looks_:
 ![looks](https://github.com/technochatter/IoT7egment/blob/master/docs/5.JPG?raw=true)
 
+#CONFIG MENU
+
+Expandable Menu:
+![Accordion list](https://github.com/technochatter/IoT7egment/blob/master/docs/6.png?raw=true)
+
+Custom Pin Config:
+![Menu 1](https://github.com/technochatter/IoT7egment/blob/master/docs/7.png?raw=true)
+
+Device Name:
+![Menu 3](https://github.com/technochatter/IoT7egment/blob/master/docs/9.png?raw=true)
+
+ThingSpeak:
+![Menu 4](https://github.com/technochatter/IoT7egment/blob/master/docs/10.png?raw=true)
+
+
+
 # Features
 * Stylish and Visible(Hence Seven Segment and not LCD)
 * Compact pluggable design with multiple layers of vero
@@ -46,7 +62,7 @@ _Photos dont justify the looks_:
 * Use PROGMEM to release heap
 * Integrate task handling and priority(use callback function pointers)
 * Formatting into a proper library with Keywords.txt etc
-* Responsive Landing Page for login and configure
+* Responsive Landing Page for login and ~~configure~~
 * FileSystem to store config, Webpage
 * Notification Display-Missed Call, Text, Email
 * Weather
